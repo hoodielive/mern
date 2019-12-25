@@ -23,4 +23,4 @@ router.post('/', [
 	res.send('User route.') 
 })
 
-module.exports = route
+module.exports = router
