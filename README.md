@@ -1,2 +1,2 @@
-# mern
+# MERN Stack 2020
 MERN Stack 2020
