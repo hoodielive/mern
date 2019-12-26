@@ -1,0 +1,10 @@
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiT2diZSBNZWppIiwiaWF0IjoxNTc3NDAyMzA3fQ.iexqfJx917KVn_6xOWvXQeegXhvjD7WMze2drZOOA34
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username": "Ogbe Meji"
+}
