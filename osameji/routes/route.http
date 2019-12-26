@@ -1,0 +1,32 @@
+GET http://localhost:3000/subscribers
+
+###
+
+GET http://localhost:3000/subscribers/5e04f2a1b1628233d41b692f
+
+
+### 
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Amazing Person",
+    "subscribedToChannel": "Linux Tribe"
+}
+
+
+### 
+
+DELETE http://localhost:3000/subscribers/5e04f2a1b1628233d41b692f
+
+
+### 
+
+PATCH http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "Amazing Person",
+    "subscribedToChannel": "Petwo Linux Tribe"
+}
