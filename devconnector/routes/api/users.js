@@ -12,11 +12,13 @@ const User = require('../../models/User')
 // @route  POST api/users
 // @desc   Register User
 // @access Public
+
 router.post('/', [
 	check('name', 'Name is required.')
 		.not()
 		.isEmpty(),
-	check('email', 'Please include a valid email.').isEmail(),
+	check('email', 'Please include a valid email.')
+		.isEmail(),
 	check(
 		'password',
 		'Please enter a password with 6 or more characters'
@@ -72,7 +74,7 @@ async (req, res) => {
 			payload, 
 			config.get('jwtSecret'),
 			{ 
-				expiresIn: 360000 
+				expiresIn: 3600
 			},
 			(error, token) => {
 				if (err) throw err
