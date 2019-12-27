@@ -24,16 +24,16 @@ router.post('/', [
 		'Please enter a password with 6 or more characters'
 	).isLength({ min: 6 })
 ],
-async (req, res) => { 
+async (req, res) => {
 	const errors = validationResult(req)
 	if(!errors.isEmpty()) {
 		return res.status(400).json({ errors: errors.array() })
 	}
-	
+
 	const { name, email, password } = req.body
 
 	try {
-		// See if user exists. 
+		// See if user exists.
 		let user = await User.findOne({ email })
 
 		if (user) {
@@ -56,7 +56,7 @@ async (req, res) => {
 			password
 		})
 
-		// Encrypt password.
+		// Encrypt password. Perhaps this is the reason why this damn thing doesn't work
 		const salt = await bcrypt.genSalt(10)
 
 		user.password = await bcrypt.hash(password, salt)
@@ -71,7 +71,7 @@ async (req, res) => {
 		};
 
 		jwt.sign(
-			payload, 
+			payload,
 			config.get('jwtSecret'),
 			(error, token) => {
 				if (err) throw err;
@@ -82,7 +82,7 @@ async (req, res) => {
 		console.error(err.message)
 		res.status(500).send('Server error.')
 	}
-  }
+ }
 );
 
 module.exports = router

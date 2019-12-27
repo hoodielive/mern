@@ -1,5 +1,4 @@
 {
 		"mongoURI": "mongodb://localhost/devconnector",
-    //"mongoURI": "mongodb+srv://larry123:larry123@devconnector-dlkjr.mongodb.net/test?retryWrites=true&w=majority",
 		"jwtSecret": "mysecrettoken"
 }
