@@ -217,6 +217,7 @@ router.put('/experience',
         profile.experience.unshift(newExp)
 
         await profile.save()
+        res.send(profile)
     } catch (err) {
        console.error(err.message) 
        res.status(500).send('Server error.')
