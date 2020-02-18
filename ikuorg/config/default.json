@@ -1,0 +1,6 @@
+{
+		"mongoURI": "mongodb://localhost/iku",
+		"jwtSecret": "mysecrettoken",
+		"githubClientId": "74ee70ecfd579070139c",
+		"githubSecret": "dbdafd980fa7baeafa904d5abd5cd976327c289e"
+}
